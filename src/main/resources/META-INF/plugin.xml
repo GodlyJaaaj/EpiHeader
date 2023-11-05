@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>com.epitech.EpiHeader</id>
+    <name>Epitech Header</name>
+    <vendor email="sebastien.lucas@epitech.eu" url="https://seblcs.me">
+        Sébastien Lucas
+    </vendor>
+    <description><![CDATA[
+    Epitech header generator,
+    Made by Epitech students for Epitech students.
+    Github: https://github.com/GodlyJaaaj
+    Default shortcut: ctrl + h
+    Open to contribution.
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup
+                id="plugin.epitech.notificationGroup"
+                displayType="BALLOON"
+        />
+
+    </extensions>
+    <actions>
+        <group id="plugin.epitech.epiheader" text="Epiheader" description="Apply Epitech header">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="com.epitech.epiheader.EpiHeader" text="Apply Header">
+                <keyboard-shortcut first-keystroke="ctrl h" keymap="$default"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
