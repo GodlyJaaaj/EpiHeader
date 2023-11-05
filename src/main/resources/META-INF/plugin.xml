@@ -5,13 +5,12 @@
         Sébastien Lucas
     </vendor>
     <description><![CDATA[
-    Epitech header generator,
-    Made by Epitech students for Epitech students.
-    Github: https://github.com/GodlyJaaaj
-    Default shortcut: ctrl + h
+    Epitech header generator <br/>
+    Made by Epitech students for Epitech students. <br/>
+    Github: https://github.com/GodlyJaaaj <br/>
+    Default shortcut: ctrl + h <br/>
     Open to contribution.
   ]]></description>
-
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
