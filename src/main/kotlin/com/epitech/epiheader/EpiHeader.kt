@@ -23,6 +23,7 @@ class EpiHeader : AnAction() {
                 ** File description:
                 ** %s
                 */
+                
                 """.trimIndent()
         }.plus(
             mapOf("makefile" to """
@@ -32,6 +33,7 @@ class EpiHeader : AnAction() {
                 ## File description:
                 ## %s
                 ##
+                
                 """.trimIndent()
             )
         )
