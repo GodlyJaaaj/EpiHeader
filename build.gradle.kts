@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.epitech"
-version = "1.2"
+version = "1.3"
 
 repositories {
     mavenCentral()
@@ -14,7 +14,7 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.2.5")
+    version.set("2023.3")
     type.set("IC") // Target IDE Platform
 
     plugins.set(listOf(/* Plugin Dependencies */))
@@ -31,8 +31,9 @@ tasks {
     }
 
     patchPluginXml {
+        changeNotes.set("Made the plugin compatible with IntelliJ 2022 and later")
         sinceBuild.set("222")
-        untilBuild.set("232.*")
+        untilBuild.set("")
     }
 
     signPlugin {
