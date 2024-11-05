@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.epitech"
-version = "1.3"
+version = "1.4"
 
 repositories {
     mavenCentral()
@@ -31,7 +31,7 @@ tasks {
     }
 
     patchPluginXml {
-        changeNotes.set("Made the plugin compatible with IntelliJ 2022 and later")
+        changeNotes.set("Added .py && CMakeLists.txt support")
         sinceBuild.set("222")
         untilBuild.set("")
     }
