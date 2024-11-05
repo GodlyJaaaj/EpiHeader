@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.epitech"
-version = "1.4"
+version = "1.5"
 
 repositories {
     mavenCentral()
@@ -31,7 +31,7 @@ tasks {
     }
 
     patchPluginXml {
-        changeNotes.set("Added .py && CMakeLists.txt support")
+        changeNotes.set("scheme && lisp files support")
         sinceBuild.set("222")
         untilBuild.set("")
     }
