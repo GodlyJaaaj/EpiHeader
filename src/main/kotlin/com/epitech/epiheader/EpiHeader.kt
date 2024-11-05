@@ -26,7 +26,7 @@ class EpiHeader : AnAction() {
                 
                 """.trimIndent()
         }.plus(
-            mapOf("makefile" to """
+            mapOf("makefile", "py", "python" to """
                 ##
                 ## EPITECH PROJECT, %d
                 ## %s
