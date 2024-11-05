@@ -26,16 +26,17 @@ class EpiHeader : AnAction() {
                 
                 """.trimIndent()
         }.plus(
-            mapOf("makefile" to """
-                ##
-                ## EPITECH PROJECT, %d
-                ## %s
-                ## File description:
-                ## %s
-                ##
-                
-                """.trimIndent()
-            )
+            listOf("makefile", "py").associateWith {
+                """
+                    ##
+                    ## EPITECH PROJECT, %d
+                    ## %s
+                    ## File description:
+                    ## %s
+                    ##
+                    
+                    """.trimIndent()
+            }
         )
     )
     override fun actionPerformed(e: AnActionEvent) {
@@ -49,11 +50,11 @@ class EpiHeader : AnAction() {
         val fileExtension : String? = file.extension?.lowercase()
         val fileContent : String = document.text
 
-        val header : String? = if (fileName.lowercase() == "makefile") {
+        val header : String? = if (fileName.lowercase() == "makefile" || fileName.lowercase() == "cmakelists.txt") {
             headersMap["makefile"]!!.format(
                 LocalDate.now().year,
                 project!!.name,
-                fileName
+                fileName.split(".")[0]
             )
         } else if (fileExtension != null && headersMap.containsKey(fileExtension.lowercase())) {
             headersMap[fileExtension.lowercase()]!!.format(
