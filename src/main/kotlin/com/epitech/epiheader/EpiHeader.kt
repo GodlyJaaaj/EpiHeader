@@ -38,6 +38,18 @@ class EpiHeader : AnAction() {
                     
                     """.trimIndent()
             }
+        ).plus(
+            listOf("scm", "el", "l", "lisp", "cl", "lsp").associateWith {
+                """
+                    ;;;
+                    ;;; EPITECH PROJECT, %d
+                    ;;; %s
+                    ;;; File description:
+                    ;;; %s
+                    ;;;
+                    
+                    """.trimIndent()
+            }
         )
     )
     override fun actionPerformed(e: AnActionEvent) {
