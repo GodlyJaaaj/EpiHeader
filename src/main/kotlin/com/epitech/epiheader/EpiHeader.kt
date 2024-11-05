@@ -73,7 +73,7 @@ class EpiHeader : AnAction() {
             headersMap[fileExtension.lowercase()]!!.format(
                 LocalDate.now().year,
                 project!!.name,
-                fileName
+                fileName.split(".")[0]
             )
         } else {
             null
