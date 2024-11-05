@@ -14,17 +14,18 @@ import com.intellij.notification.Notifications
 
 class EpiHeader : AnAction() {
 
-    private val headersMap = emptyMap<String, String>().plus(
-        listOf("h", "hpp", "hh", "hxx", "h++", "c", "cpp", "cc", "cxx", "c++").associateWith {
-            """
-                /*
-                ** EPITECH PROJECT, %d
-                ** %s
-                ** File description:
-                ** %s
-                */
-                
-                """.trimIndent()
+    private val headersMap = emptyMap<String, String>()
+        .plus(
+            listOf("h", "hpp", "hh", "hxx", "h++", "c", "cpp", "cc", "cxx", "c++").associateWith {
+                """
+                    /*
+                    ** EPITECH PROJECT, %d
+                    ** %s
+                    ** File description:
+                    ** %s
+                    */
+                    
+                    """.trimIndent()
         }.plus(
             listOf("makefile", "py").associateWith {
                 """
